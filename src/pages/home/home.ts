@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { MenuController, NavController } from 'ionic-angular';
 import { IonicPage } from 'ionic-angular/navigation/ionic-page';
 
 @IonicPage()
@@ -9,9 +9,17 @@ import { IonicPage } from 'ionic-angular/navigation/ionic-page';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public menu: MenuController) {
 
   }
+  ionViewWillEnter() {
+    this.menu.swipeEnable(false);
+  }
+
+  ionViewDidLeave() {
+    this.menu.swipeEnable(true);
+  }
+  
   login(){
     //empilhar uma pagina na outra ===> Obs: pra coiar outra página tem que usar o comando: ionic generate page NomeDaPagina 
     //this.navCtrl.push("ChamadasPage"); 

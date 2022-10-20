@@ -19,7 +19,7 @@ export class HomePage {
   ionViewDidLeave() {
     this.menu.swipeEnable(true);
   }
-  
+
   login(){
     //empilhar uma pagina na outra ===> Obs: pra coiar outra página tem que usar o comando: ionic generate page NomeDaPagina 
     //this.navCtrl.push("ChamadasPage"); 
@@ -32,7 +32,7 @@ export class HomePage {
     this.navCtrl.push("RegistroPage");
   }
   recuperaSenha(){
-    this.navCtrl.push('RecuperaSenhaPage');
+    this.navCtrl.push("CongregacoesPage");
   }
 
 }
